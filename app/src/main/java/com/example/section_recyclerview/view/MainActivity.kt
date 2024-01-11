@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             adapter = AdapterParent(this@MainActivity, listModelParent)
         }
     }
+    
 
     private fun initList() {
         listModelParent.add(ModelChild("Section 1", mutableListOf("1 - one", "1 - two", "1 - three", "1 - four", "1 - five")))
