@@ -8,17 +8,17 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.section_recyclerview.R
 
-class AdapterChild(private val context: Context, private val list: List<String>) :
-    RecyclerView.Adapter<AdapterChild.MyViewHolder>() {
+class AdapterItensGerais(private val context: Context, private val listItensGerais: List<String>) :
+    RecyclerView.Adapter<AdapterItensGerais.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val childText = itemView.findViewById<TextView>(R.id.child_text)
+        val textViewItensGerais = itemView.findViewById<TextView>(R.id.itens_gerais_id)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterChild.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterItensGerais.MyViewHolder {
 
         val itemLista = LayoutInflater.from(context).inflate(
-            R.layout.item_recyclerview_child,
+            R.layout.itens_gerais,
             parent, false
         )
 
@@ -26,12 +26,12 @@ class AdapterChild(private val context: Context, private val list: List<String>)
         return holder
     }
 
-    override fun onBindViewHolder(holder: AdapterChild.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AdapterItensGerais.MyViewHolder, position: Int) {
 
-        holder.childText.text = list[position]
+        holder.textViewItensGerais.text = listItensGerais[position]
     }
 
     override fun getItemCount(): Int {
-        return list.size
+        return listItensGerais.size
     }
 }
