@@ -1,46 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.MainActivity">
-    
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    <View
-        android:id="@+id/viewId001"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/color_greenn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_geral_id"
+        android:id="@+id/cnstrntLt_Id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewId001"
-        tools:itemCount="3"
-        tools:listitem="@layout/recycleview_sessao" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <View
-        android:id="@+id/viewId002"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:background="@color/color_greenn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <View
+                android:id="@+id/view_001_id"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/color_greenn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_geral_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/view_002_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_001_id"
+            tools:itemCount="3"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            tools:listitem="@layout/recycleview_sessao" />
+
+            <View
+                android:id="@+id/view_002_id"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/color_greenn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</ScrollView>
+</androidx.core.widget.NestedScrollView>

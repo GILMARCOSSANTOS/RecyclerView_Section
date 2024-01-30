@@ -5,17 +5,17 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.textview.MaterialTextView
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/itens_gerais_id"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_width="wrap_content"
-        android:textStyle="bold"
-        android:layout_marginTop="25dp"
-        android:textColor="@color/color_greenn"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
+        android:layout_marginTop="25dp"
         android:text="Itens gerais sem a data"
-        android:textSize="25sp" />
+        android:textColor="@color/color_greenn"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
